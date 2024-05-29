@@ -4,15 +4,11 @@ import { AppService } from './app.service';
 
 import { UserModule } from './user/user.module';
 
-// @Module({
-//   imports: [],
-//   controllers: [AppController],
-//   providers: [AppService],
-// })
-// export class AppModule {}
-
-
 @Module({
-  imports: [UserModule],
+  imports: [],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
+
+
