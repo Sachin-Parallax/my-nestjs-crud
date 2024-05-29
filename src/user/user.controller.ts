@@ -29,12 +29,12 @@ export class UserController {
   }
 
   @Delete('delete/user')
-  async deleteUser(@Query('id') id: string): Promise<UserModel> {
+  async deleteUserData(@Query('id') id: string): Promise<UserModel> {
     return this.userService.deleteUser({ id: Number(id) });
   }
 
   @Put('update/user')
-  async updateUser(
+  async updateUserData(
     @Query('id') id: string, // Using @Query to get the id from the query parameter
     @Body() userData: { name?: string; email?: string },
   ): Promise<UserModel> {
